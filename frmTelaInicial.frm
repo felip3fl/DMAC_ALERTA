@@ -8,8 +8,8 @@ Begin VB.Form frmTelaInicial
    ClientTop       =   4215
    ClientWidth     =   4590
    LinkTopic       =   "Form2"
-   ScaleHeight     =   3375
-   ScaleWidth      =   4590
+   ScaleHeight     =   10575
+   ScaleWidth      =   20490
    ShowInTaskbar   =   0   'False
    Begin VB.Timer tmeChamaFormulario 
       Interval        =   1000
@@ -92,7 +92,7 @@ Function chamaFormulario() As Boolean
     Select Case idFormulario
         Case 0
             glb_monitorarRede = True
-            frmMetaMensal.Show
+            frmDMACAlerta.Show
             glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 1
             frmMonitoraVenda.Show
@@ -108,4 +108,5 @@ Function chamaFormulario() As Boolean
         chamaFormulario = False
         idFormulario = 0
     End Select
+    
 End Function

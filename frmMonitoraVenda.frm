@@ -1265,10 +1265,10 @@ Private Sub atualizaValores()
               "from meta, loja" & vbNewLine & _
               "where me_mes = '" & Format(Date, "MM") & "' " & vbNewLine & _
               "and ME_ANO = '" & Format(Date, "YYYY") & "'" & vbNewLine & _
-              "and lo_loja = me_loja and me_loja not in (86)" & vbNewLine & _
+              "and lo_loja = me_loja and me_loja not in ('86','185')" & vbNewLine & _
               "union" & vbNewLine & _
-              "select '999' as regiao, 'CONSO' as loja, (select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'V' and dataemi = '" & Format(Date, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Date, "MM") & "' and ME_ANO = '" & Format(Date, "YYYY") & "' and me_loja not in ('86') and me_loja = lojavenda) as totalvenda," & vbNewLine & _
-              "(select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'E' and dataemi = '" & Format(Date, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Date, "MM") & "' and ME_ANO = '" & Format(Date, "YYYY") & "' and me_loja not in ('86') and me_loja = lojavenda) as totalDevolucao" & vbNewLine & _
+              "select '999' as regiao, 'CONSO' as loja, (select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'V' and dataemi = '" & Format(Date, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Date, "MM") & "' and ME_ANO = '" & Format(Date, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalvenda," & vbNewLine & _
+              "(select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'E' and dataemi = '" & Format(Date, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Date, "MM") & "' and ME_ANO = '" & Format(Date, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalDevolucao" & vbNewLine & _
               "order by regiao,loja"
               
         rsDados.CursorLocation = adUseClient
@@ -1413,7 +1413,7 @@ Private Sub carregaValoresFixo()
           "from meta,LOJA" & vbNewLine & _
           "where me_mes = '" & Format(Date, "MM") & "'" & vbNewLine & _
           "AND ME_ANO = '" & Format(Date, "YYYY") & "'" & vbNewLine & _
-          "AND me_loja = lo_loja and me_loja not in (86)" & vbNewLine & _
+          "AND me_loja = lo_loja and me_loja not in ('86','185')" & vbNewLine & _
           "union" & vbNewLine & _
           "select top 1 sum(ME_Meta/ME_QuantDiasUteisMes) as metaDia,'999' as regiao, 'CONSO' as loja from meta where me_mes = '" & Format(Date, "MM") & "' AND ME_ANO = '" & Format(Date, "YYYY") & "'" & vbNewLine & _
           "ORDER BY REGIAO,loja"

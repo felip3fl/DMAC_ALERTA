@@ -507,7 +507,8 @@ Public Sub Form_Unload(Cancel As Integer)
 End Sub
 
 Private Sub imgStatus_DblClick(Index As Integer)
-    adoCNLoja.Close
+    
+    'adoCNLoja.Close
     End
 End Sub
 
