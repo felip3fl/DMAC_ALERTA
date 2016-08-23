@@ -1,0 +1,28 @@
+body {
+font-family: "Arial", "Helvetica", sans-serif;
+}
+
+h1{
+	color: #fff;
+	font-weight: normal;
+	font-family: "Segoe UI Light","Segoe WP Light","Segoe WP","Segoe UI",Arial,Sans-Serif;
+	font-size: 16rem;
+	line-height: normal;
+	direction: ltr;
+	line-height: 1;
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+h2{
+	color:white;
+	font-size:20px;
+}
+
+
+figure{
+	
+}

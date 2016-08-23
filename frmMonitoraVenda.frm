@@ -6,8 +6,8 @@ Begin VB.Form frmMonitoraVenda
    BorderStyle     =   0  'None
    Caption         =   "Monitoramento de Vendas"
    ClientHeight    =   10440
-   ClientLeft      =   2925
-   ClientTop       =   8220
+   ClientLeft      =   24480
+   ClientTop       =   630
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
    ScaleHeight     =   10440

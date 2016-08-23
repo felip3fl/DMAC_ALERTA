@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="RGraph.common.core.js" ></script>
+    <script src="RGraph.line.js" ></script>
+    
+    <title>A filled blue Line chart</title>
+    
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="A filled blue Line chart" />
+     
+</head>
+<body background="oi.jpg">
+
+    <h1>A filled blue line chart</h1>
+
+    <canvas id="cvs" width="1024" height="200">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var line = new RGraph.Line({
+                id: 'cvs',
+                data: [
+                    1,3,4,2,5,6,4,5                  
+                ],
+                options: {
+                    labels: ['Aug 13, 2012','Sep 9 2013','Oct 6 2014'],
+                    gutterLeft: 100,
+                    gutterRight: 85,
+                    filled: true,
+                    fillstyle: ['#33E15E'],
+                    colors: ['#59E67C'],
+                    shadow: false,
+                    tickmarks: 100,
+                    numxticks: 0,
+                    backgroundGridVlines: false,
+                    backgroundGridBorder: false,
+                    noxaxis: true,
+                    textSize: 16,
+                    textAccessible: true
+                }
+            }).draw();
+        };
+    </script>
+
+
+
+
+
+
+</body>
+</html>
