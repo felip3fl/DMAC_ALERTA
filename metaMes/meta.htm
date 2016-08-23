@@ -1,0 +1,83 @@
+<!DOCTYPE html><html>
+
+    <head data-info="v:2.0.6071.8678;a:8e1bac59-c223-4cff-a000-d58bb18a4024;cn:3;az:{did:1a93585be2fe43098de05c79096a46b8, rid: 3, sn: eastus-weather, dt: 2016-07-25T05:45:17.7136342Z, bt: 2016-08-15T04:52:29.3792083Z};ddpi:1;dpio:1.4;dpi:1.4;dg:tmx.pc.moz;th:blue;PageName:weatherLocalPage;m:pt-br;cb:;l:pt-br;mu:pt-br;ud:{cid:,vk:weather,n:,l:pt-br,ck:};xd:AA9Kj0Q;ovc:f;al:;fxd:f;xdpub:2016-06-07 11:18:30Z;xdmap:2016-08-19 18:01:57Z;axd:;f:muidflt9cf,muidflt29cf,intl-viglink,moat-adstr,muidflt59cf,muidflt258cf,filter-200intl"  data-js="{&quot;dpi&quot;:1.4,&quot;ddpi&quot;:1.0,&quot;dpio&quot;:1.4,&quot;forcedpi&quot;:null,&quot;dms&quot;:6000,&quot;bds&quot;:7,&quot;dg&quot;:&quot;tmx.pc.moz&quot;,&quot;ssl&quot;:true,&quot;moduleapi&quot;:&quot;https://www.msn.com/pt-br/clima/api/modules/fetch&quot;,&quot;cdnmoduleapi&quot;:&quot;https://static-weather-eus-s-msn-com.akamaized.net/pt-br/clima/api/modules/cdnfetch&quot;,&quot;pdpdeltaupdateapi&quot;:&quot;https://www.msn.com/pt-br/homepage/api/pdp/updatepdpdata&quot;,&quot;xd&quot;:&quot;aa9kj0q&quot;,&quot;signedin&quot;:0,&quot;sso&quot;:&quot;https://login.live.com/login.srf?wa=wsignin1.0&amp;rpsnv=13&amp;checkda=1&amp;ct=1471629720&amp;rver=6.7.6643.0&amp;wp=lbi&amp;wreply=https%3a%2f%2fwww.msn.com%2fpt-br%2fclima%2fsecure%2fsilentpassport%3fsecure%3dtrue&amp;lc=1033&amp;id=1184&amp;mkt=pt-br&quot;,&quot;exchangeenabled&quot;:false,&quot;twitterimpenabled&quot;:false,&quot;greenidcallenabled&quot;:false}"  data-client-settings="{&quot;geo_country&quot;:&quot;br&quot;,&quot;os_region&quot;:&quot;&quot;,&quot;apps_locale&quot;:&quot;&quot;,&quot;base_url&quot;:&quot;/pt-br/clima/&quot;,&quot;aid&quot;:&quot;8e1bac59c2234cffa000d58bb18a4024&quot;,&quot;sid&quot;:null,&quot;v&quot;:&quot;2.0.6071.8678&quot;,&quot;static_page&quot;:false,&quot;fbid&quot;:&quot;132970837947&quot;,&quot;lvk&quot;:&quot;clima&quot;,&quot;vk&quot;:&quot;weather&quot;,&quot;cat&quot;:null,&quot;autorefresh&quot;:true,&quot;bingssl&quot;:false,&quot;autorefreshsettings&quot;:{&quot;is_market_enabled&quot;:true,&quot;timeout&quot;:7,&quot;idle_enabled&quot;:false,&quot;idle_timeout&quot;:&quot;2&quot;},&quot;uipr&quot;:false,&quot;uiprsettings&quot;:{&quot;enabled&quot;:false,&quot;frequency_minutes&quot;:null,&quot;banner_delay_minutes&quot;:null,&quot;maxfresh_display&quot;:null,&quot;minfresh_count&quot;:&quot;5&quot;,&quot;ajaxtimeoutinseconds&quot;:&quot;60&quot;},&quot;imgsrc&quot;:{&quot;quality_high&quot;:&quot;60&quot;,&quot;quality_low&quot;:&quot;5&quot;,&quot;order_timeout&quot;:&quot;1000&quot;},&quot;adsettings&quot;:{&quot;wait_for_ad_in_sec&quot;:&quot;3&quot;,&quot;retry_for_ad&quot;:&quot;2&quot;},&quot;mecontroluri&quot;:&quot;https://mem.gfx.ms/meversion/?partner=msn&amp;market=pt-br&quot;,&quot;lazyload&quot;:{&quot;enabled&quot;:false}}"  data-xd-id="AA9Kj0Q" >
+        <meta charset="utf-8" />
+	
+    <script src="RGraph.common.core.js" ></script>
+    <script src="RGraph.line.js" ></script>
+
+
+<title>DMAC ALERTA</title>
+<link rel="stylesheet" href="teste.css">
+</head>
+
+<body background="red.jpg" style="background-repeat: no-repeat">
+	<table width="1024px" border="0" align="left">
+  <tbody>
+    <tr>
+      <td valign=top align=right width="410px">&nbsp; 
+      	<strong><estilo1>66</estilo1></strong>
+      </td>
+
+      <td valign=top align=left width="150px">&nbsp; 
+      	<strong> <estilo3>%</estilo3></strong>
+      </td>
+
+      <td valign=top align=left>&nbsp;
+      	<strong> 
+        <estilo2>        
+        <estilo4> Meta 4.220.165,00</estilo4>
+        <br>
+        <estilo2>
+        Vendas Atual: <b>2.797.604,40</b> <br>
+		Valor Restante: <b>1.422.560,60</b> <br>
+        Percetual Restante: <b>33,71%</b> <br>
+        
+        </estilo2>
+        </strong>  
+      </td>          
+    </tr>
+    
+     <tr height="0px">
+      <td>&nbsp; 
+      </td>
+     </tr>
+
+  </tbody>
+</table>
+
+
+
+    <canvas id="cvs" width="1044" height="455" >[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var line = new RGraph.Line({
+                id: 'cvs',
+                data: [150791.15, 153295.25, 175113.89, 135916.08, 138437.52, 110773.04, 150618.72, 190602.63, 163541.47, 134098.82, 160347.63, 120795.73, 124319.42, 124091.04, 126637.37, 105769.88, 133917.74, 104136.45, 167853.16, 81713.1            
+                ],
+                options: {
+                    labels: ['1','|','2','|','3','|','4','|','5','|','6','|','8','|','9','|','10','|','11','|','12','|','13','|','15','|','16','|','17','|','18','|','19','|','20','|','22','|','23'],
+                    gutterLeft: 80,
+                    gutterRight: 85,
+                    filled: true,
+                    fillstyle: ['#DC1B1A'],
+                    colors: ['#EC8080'],
+                    shadow: false,
+                    tickmarks: 100,
+                    numxticks: 0,
+                    backgroundGridVlines: true,
+                    backgroundGridBorder: true,
+                    noxaxis: true,
+                    textSize: 10,
+                    textAccessible: true
+                }
+            }).draw();
+        };
+    </script>
+
+
+</body>
+</html>
+
