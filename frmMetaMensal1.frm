@@ -260,9 +260,9 @@ End Sub
 
 Private Sub obterCorPercetual(arquivoHTML As String, percentual As Double)
     
-    If percentual < 80 Then
+    If percentual < 50 Then
         Call alteraCores(arquivoHTML, "red")
-    ElseIf percentual < 90 Then
+    ElseIf percentual < 75 Then
         Call alteraCores(arquivoHTML, "orange")
     ElseIf percentual < 100 Then
         Call alteraCores(arquivoHTML, "yellow")

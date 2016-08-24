@@ -80,7 +80,7 @@ On Error Resume Next
        oIE.Width = 1350
        oIE.Height = 1350
        oIE.top = -34
-       oIE.left = -8
+       oIE.left = -6
    End With
 End Sub
 
