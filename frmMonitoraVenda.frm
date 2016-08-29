@@ -6,10 +6,11 @@ Begin VB.Form frmMonitoraVenda
    BorderStyle     =   0  'None
    Caption         =   "Monitoramento de Vendas"
    ClientHeight    =   10440
-   ClientLeft      =   24480
-   ClientTop       =   630
+   ClientLeft      =   3300
+   ClientTop       =   240
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
    ScaleHeight     =   10440
    ScaleWidth      =   15300
    ShowInTaskbar   =   0   'False
@@ -1425,7 +1426,7 @@ Private Sub carregaValoresFixo()
         With Me.chrVenda(i).Plot.Axis(VtChAxisIdY).ValueScale
             .Auto = False
             .Minimum = 0
-            .Maximum = Replace(Format(rsDados("metaDia"), "0.00"), ".", ",")
+            .Maximum = Replace(Format(rsDados("metaDia") + 0.01, "0.00"), ".", ",")
             .MajorDivision = 4
             .MinorDivision = 4
         End With

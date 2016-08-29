@@ -333,7 +333,7 @@ Private Sub verificaMetaDia()
             End If
             
             diasHTML = diasHTML & "'" & rsDados("dia") & "','|',"
-            valoresHTML = valoresHTML & Replace((venda - devolucao), ",", ".") & ", "
+            valoresHTML = valoresHTML & Replace(Val(venda - devolucao), ",", ".") & ", "
             
         
             rsDados.MoveNext
