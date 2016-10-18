@@ -1,6 +1,6 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{57A8CB30-B154-47A6-BB5C-CB7707D4FC83}#1.0#0#..\..\WINDOWS\SysWow64\dmacd.dll#DMACD
+Reference=*\G{57A8CB30-B154-47A6-BB5C-CB7707D4FC83}#1.0#0#..\..\Windows\SysWow64\DMACD.dll#DMACD
 Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\Windows\SysWOW64\scrrun.dll#Microsoft Scripting Runtime
 Reference=*\G{B691E011-1797-432E-907A-4D8C69339129}#6.1#0#..\..\Program Files (x86)\Common Files\System\ado\msado15.dll#Microsoft ActiveX Data Objects 6.1 Library
 Object={6BF52A50-394A-11D3-B153-00C04F79FAA6}#1.0#0; wmp.dll
@@ -32,7 +32,7 @@ Description="DMAC Alerta"
 CompatibleMode="0"
 MajorVer=1
 MinorVer=0
-RevisionVer=19
+RevisionVer=20
 AutoIncrementVer=0
 ServerSupportFiles=0
 VersionCompanyName="De Meo"
