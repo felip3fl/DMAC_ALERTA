@@ -5,8 +5,8 @@ Begin VB.Form frmMetaMensal1
    BorderStyle     =   0  'None
    Caption         =   "Form1"
    ClientHeight    =   7470
-   ClientLeft      =   1410
-   ClientTop       =   1710
+   ClientLeft      =   23460
+   ClientTop       =   195
    ClientWidth     =   17235
    LinkTopic       =   "Form1"
    ScaleHeight     =   7470
@@ -215,7 +215,7 @@ Private Sub Form_Load()
     webNavegador.bControlInDevelopmentMode = True
     
     webNavegador.Nav "c:\sistemas\dmac alerta\metaMes\meta.htm"
-    webNavegador.EmbedIE FrameNavegador.hWnd
+    webNavegador.EmbedIE FrameNavegador.hwnd
     
     frmSOM.Visible = False
     imgSemConexao.Visible = False
@@ -306,7 +306,7 @@ Private Sub verificaMetaDia()
     diasHTML = ""
     valoresHTML = ""
     dataAtual = Date
-    'dataAtual = "2016/07/30"
+'    'dataAtual = "2016/07/30"
     
     On Error GoTo trataerro
     
@@ -423,7 +423,7 @@ Private Sub atualizaValores()
     
 
     webNavegador.Nav "c:\sistemas\dmac alerta\metaMes\meta.htm"
-    webNavegador.EmbedIE FrameNavegador.hWnd
+    webNavegador.EmbedIE FrameNavegador.hwnd
     
     abilitaSOM percentualVenda
     

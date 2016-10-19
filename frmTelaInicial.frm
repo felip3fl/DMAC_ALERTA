@@ -4,8 +4,8 @@ Begin VB.Form frmTelaInicial
    BorderStyle     =   0  'None
    Caption         =   "Form2"
    ClientHeight    =   3375
-   ClientLeft      =   3180
-   ClientTop       =   4215
+   ClientLeft      =   5265
+   ClientTop       =   2295
    ClientWidth     =   4590
    LinkTopic       =   "Form2"
    ScaleHeight     =   3375
@@ -98,7 +98,7 @@ Function chamaFormulario() As Boolean
             frmMonitoraVenda.Show
             glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 2
-            If Day(Date) >= 20 Then
+            If Day(Date) >= 27 Then
                 frmMetaMensal1.Show
                 glb_tempoPadraoExibicao = left(Buffer, 2)
             Else

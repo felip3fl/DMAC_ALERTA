@@ -6,10 +6,11 @@ Begin VB.Form frmMonitoraVenda
    BorderStyle     =   0  'None
    Caption         =   "Monitoramento de Vendas"
    ClientHeight    =   9690
-   ClientLeft      =   2715
-   ClientTop       =   195
+   ClientLeft      =   2250
+   ClientTop       =   780
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
+   LockControls    =   -1  'True
    ScaleHeight     =   9690
    ScaleWidth      =   15300
    ShowInTaskbar   =   0   'False
@@ -34,7 +35,8 @@ Begin VB.Form frmMonitoraVenda
          WhatsThisHelpID =   2940
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -48,11 +50,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   6
-            Left            =   0
+            Left            =   945
             TabIndex        =   74
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   990
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -75,7 +77,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   2835
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -89,11 +92,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   4
-            Left            =   0
+            Left            =   1110
             TabIndex        =   72
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   630
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -116,7 +119,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   5670
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -130,11 +134,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   8
-            Left            =   0
+            Left            =   570
             TabIndex        =   76
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   780
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -157,7 +161,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   8505
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -171,11 +176,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   12
-            Left            =   0
+            Left            =   825
             TabIndex        =   80
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   990
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -198,7 +203,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   0
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -212,11 +218,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   1
-            Left            =   0
+            Left            =   840
             TabIndex        =   69
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   900
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -239,7 +245,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   0
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -253,11 +260,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   2
-            Left            =   0
+            Left            =   825
             TabIndex        =   70
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   705
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -280,7 +287,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   0
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -294,11 +302,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   3
-            Left            =   0
+            Left            =   465
             TabIndex        =   71
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   765
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -321,7 +329,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   2835
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -335,11 +344,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   5
-            Left            =   0
+            Left            =   630
             TabIndex        =   73
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   405
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -362,7 +371,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   5670
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -376,11 +386,11 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   9
-            Left            =   0
+            Left            =   360
             TabIndex        =   77
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   750
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -403,7 +413,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   0
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -419,9 +430,9 @@ Begin VB.Form frmMonitoraVenda
             Index           =   0
             Left            =   1155
             TabIndex        =   68
-            Text            =   " Vendas Encerrada"
+            Text            =   "Vendas não iniciada"
             Top             =   840
-            Width           =   1890
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
@@ -445,7 +456,8 @@ Begin VB.Form frmMonitoraVenda
          WhatsThisHelpID =   2940
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -459,17 +471,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   7
-            Left            =   0
+            Left            =   675
             TabIndex        =   75
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   720
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   7
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":12D28
+            OleObjectBlob   =   "frmMonitoraVenda.frx":12DA2
             TabIndex        =   14
             Top             =   -140
             Width           =   3735
@@ -486,7 +498,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   5670
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -500,17 +513,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   10
-            Left            =   0
+            Left            =   585
             TabIndex        =   78
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   750
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   10
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":14B37
+            OleObjectBlob   =   "frmMonitoraVenda.frx":14BB1
             TabIndex        =   12
             Top             =   -140
             Width           =   3735
@@ -527,7 +540,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   5670
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -541,17 +555,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   11
-            Left            =   0
+            Left            =   675
             TabIndex        =   79
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   885
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   11
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":16946
+            OleObjectBlob   =   "frmMonitoraVenda.frx":169C0
             TabIndex        =   10
             Top             =   -140
             Width           =   3735
@@ -568,7 +582,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   8505
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -582,17 +597,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   13
-            Left            =   0
+            Left            =   960
             TabIndex        =   81
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   840
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   13
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":18755
+            OleObjectBlob   =   "frmMonitoraVenda.frx":187CF
             TabIndex        =   8
             Top             =   -140
             Width           =   3735
@@ -609,7 +624,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   8505
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -623,17 +639,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   14
-            Left            =   0
+            Left            =   1020
             TabIndex        =   82
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   765
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   14
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":1A564
+            OleObjectBlob   =   "frmMonitoraVenda.frx":1A5DE
             TabIndex        =   6
             Top             =   -140
             Width           =   3735
@@ -650,7 +666,8 @@ Begin VB.Form frmMonitoraVenda
          Top             =   8505
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
-            BackColor       =   &H00C00000&
+            Alignment       =   2  'Center
+            BackColor       =   &H00800000&
             BorderStyle     =   0  'None
             BeginProperty Font 
                Name            =   "Arial Narrow"
@@ -664,17 +681,17 @@ Begin VB.Form frmMonitoraVenda
             ForeColor       =   &H00FFFFFF&
             Height          =   360
             Index           =   15
-            Left            =   0
+            Left            =   810
             TabIndex        =   83
             Text            =   " Vendas Encerrada"
-            Top             =   0
-            Width           =   1890
+            Top             =   600
+            Width           =   1995
          End
          Begin MSChartLib.MSChart chrVenda 
             Height          =   2500
             Index           =   15
             Left            =   0
-            OleObjectBlob   =   "frmMonitoraVenda.frx":1C373
+            OleObjectBlob   =   "frmMonitoraVenda.frx":1C3ED
             TabIndex        =   4
             Top             =   -140
             Width           =   3735
@@ -1382,7 +1399,7 @@ Begin VB.Form frmMonitoraVenda
    Begin VB.Image imgSemConexao 
       Height          =   11520
       Left            =   18360
-      Picture         =   "frmMonitoraVenda.frx":1E182
+      Picture         =   "frmMonitoraVenda.frx":1E1FC
       Top             =   150
       Visible         =   0   'False
       Width           =   20400
@@ -1422,7 +1439,7 @@ Begin VB.Form frmMonitoraVenda
    Begin VB.Image imgDivisao 
       Height          =   450
       Left            =   15315
-      Picture         =   "frmMonitoraVenda.frx":2AC78
+      Picture         =   "frmMonitoraVenda.frx":2ACF2
       Top             =   8070
       Width           =   15360
    End
@@ -1676,10 +1693,19 @@ Private Sub atualizaValores()
         colorirGrafico chrVenda(i), lblInfo(i), percentual
         alertaSonoro i, percentual
         chrVenda(i).chartType = chrVenda(0).chartType
-
+        
+        If Format(Now, "hh") > 12 Then
+            txtVendaEncerrada(i).Text = "Vendas Encerrada"
+            
+        Else
+            txtVendaEncerrada(i).Text = "Vendas não iniciada"
+        End If
+        
         'chrVenda(i).columnCount = chrVenda(0).columnCount
         'chrVenda(i).Column = chrVenda(0).Column
     Next i
+    
+    Call metaMensal
     
     semConexao False
     
@@ -1743,6 +1769,23 @@ trataerro:
     
     semConexao True
     
+End Sub
+
+Private Sub metaMensal()
+
+Dim sql As String
+Dim rsDados As New ADODB.Recordset
+
+'sql = "select day(base.DATAEMI) as dia,(select sum(totalnota) from nfcapa, meta where base.DATAEMI = DATAEMI and tiponota = 'V' and ME_Mes = '" & Format(Date, "MM") & "' and ME_Ano = '" & Format(Date, "YYYY") & "' and me_loja = lojavenda and me_loja not in ('86','185','314')) AS venda," & vbNewLine & _
+'          "(select sum(totalnota) from nfcapa, meta where   base.DATAEMI = DATAEMI and tiponota = 'E' and ME_Mes = '" & Format(Date, "MM") & "' and ME_Ano = '" & Format(Date, "YYYY") & "' and me_loja = lojavenda and me_loja not in ('86','185','314')) as devolucao" & vbNewLine & _
+'          "from nfcapa as base where month(dataemi) = '" & Format(Date, "MM") & "' and  year(dataemi) = '" & Format(Date, "YYYY") & "' and tiponota in ('V','E') and lojavenda not in ('86','185','314')  GROUP BY DATAEMI order by DATAEMI"
+'    rsDados.CursorLocation = adUseClient
+'    rsDados.Open sql, adoCNLoja, adOpenForwardOnly, adLockPessimistic
+'
+'
+'
+'    rsDados.Close
+
 End Sub
 
 Private Sub alertaSonoro(posicaoComp As Byte, novoPercentual As Double)
