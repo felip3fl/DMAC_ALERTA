@@ -6,8 +6,8 @@ Begin VB.Form frmMonitoraVenda
    BorderStyle     =   0  'None
    Caption         =   "Monitoramento de Vendas"
    ClientHeight    =   9690
-   ClientLeft      =   2250
-   ClientTop       =   780
+   ClientLeft      =   1065
+   ClientTop       =   2145
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
@@ -1534,7 +1534,7 @@ Private Sub alinhaCompomentes()
         lblInfo(i).Alignment = 2
         lblInfo(i).Caption = ""
         
-        txtVendaEncerrada(i).left = 1400
+        txtVendaEncerrada(i).left = 1300
         txtVendaEncerrada(i).top = 840
         
     Next i
@@ -1688,7 +1688,7 @@ Private Sub atualizaValores()
     For i = 0 To i2
         chrVenda(i).Column = 2
         percentual = (chrVenda(i).data / retornaMeta(chrVenda(i))) * 100
-        lblInfo(i).Caption = "Venda " & Format(chrVenda(i).data, "#,##") & " (" & Format(percentual, "0.00") & "%)  "
+        lblInfo(i).Caption = "Venda " & Format(chrVenda(i).data, "0.00") & " (" & Format(percentual, "0.00") & "%)  "
         If i = 15 Then lblInfo(i).Caption = "(" & Format(percentual, "0.00") & "%)     "
         colorirGrafico chrVenda(i), lblInfo(i), percentual
         alertaSonoro i, percentual

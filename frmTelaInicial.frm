@@ -98,7 +98,7 @@ Function chamaFormulario() As Boolean
             frmMonitoraVenda.Show
             glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 2
-            If Day(Date) >= 27 Then
+            If Day(Date) >= 30 Then
                 frmMetaMensal1.Show
                 glb_tempoPadraoExibicao = left(Buffer, 2)
             Else
