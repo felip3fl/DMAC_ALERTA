@@ -5,8 +5,8 @@ Begin VB.Form frmDMACAlerta
    BorderStyle     =   0  'None
    Caption         =   "DMAC Alerta"
    ClientHeight    =   10290
-   ClientLeft      =   2535
-   ClientTop       =   1500
+   ClientLeft      =   1290
+   ClientTop       =   2520
    ClientWidth     =   15120
    Icon            =   "DMAC Alerta.frx":0000
    LinkTopic       =   "Form1"

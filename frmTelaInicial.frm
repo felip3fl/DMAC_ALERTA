@@ -69,11 +69,15 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub tmeChamaFormulario_Timer()
-
+    
+    If glb_tempoPadraoExibicao = 0 Then
+            tempo = 0
+            idFormulario = idFormulario + 1
+    End If
+    
     tempo = tempo + 1
-    glb_tempoPrevisao = glb_tempoPrevisao + 1
 
-    If tempo > glb_tempoPadraoExibicao Then
+    If tempo >= glb_tempoPadraoExibicao Then
         If chamaFormulario = True Then
             tempo = 0
             idFormulario = idFormulario + 1
@@ -89,32 +93,33 @@ Function chamaFormulario() As Boolean
     chamaFormulario = True
     glb_monitorarRede = False
     Call GetPrivateProfileString("Tempo de Exibicao", "Tela" & idFormulario, "", Buffer, 255, App.EXEName & ".ini")
+    
+    glb_tempoPadraoExibicao = left(Buffer, 2)
+    If glb_tempoPadraoExibicao = 0 Then idFormulario = idFormulario + 1
+    
     Select Case idFormulario
         Case 0
             glb_monitorarRede = True
             frmDMACAlerta.Show
-            glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 1
             frmMonitoraVenda.Show
-            glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 2
             If Day(Date) >= 30 Then
                 frmMetaMensal1.Show
-                glb_tempoPadraoExibicao = left(Buffer, 2)
-            Else
-                glb_tempoPadraoExibicao = 0
+            'Else
+             '   glb_tempoPadraoExibicao = 0
             End If
             
         Case 3
             frmPrevisãoTempo.Show
-            glb_tempoPadraoExibicao = left(Buffer, 2)
         Case 4
             frmLogo.Show
-            glb_tempoPadraoExibicao = left(Buffer, 2)
         Case Else
+        
         glb_primeiraConexao = False
         chamaFormulario = False
         idFormulario = 0
+        
     End Select
     
 End Function

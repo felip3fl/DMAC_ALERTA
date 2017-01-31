@@ -5,8 +5,8 @@ Begin VB.Form frmMetaMensal1
    BorderStyle     =   0  'None
    Caption         =   "Form1"
    ClientHeight    =   7470
-   ClientLeft      =   23460
-   ClientTop       =   195
+   ClientLeft      =   1710
+   ClientTop       =   2190
    ClientWidth     =   17235
    LinkTopic       =   "Form1"
    ScaleHeight     =   7470
@@ -59,10 +59,10 @@ Begin VB.Form frmMetaMensal1
       Top             =   495
       Width           =   8115
       Begin DMAC_Alerta.IEalt webNavegador 
-         Left            =   7155
-         Top             =   2955
-         _ExtentX        =   4339
-         _ExtentY        =   2858
+         Left            =   5025
+         Top             =   2595
+         _ExtentX        =   1799
+         _ExtentY        =   1720
       End
    End
    Begin WMPLibCtl.WindowsMediaPlayer som 
@@ -130,6 +130,7 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
 Option Explicit
 
 Dim metaMes As Double
@@ -263,9 +264,9 @@ Private Sub obterCorPercetual(arquivoHTML As String, percentual As Double)
     If percentual < 50 Then
         Call alteraCores(arquivoHTML, "red")
     ElseIf percentual < 75 Then
-        Call alteraCores(arquivoHTML, "orange")
+        Call alteraCores(arquivoHTML, "red")
     ElseIf percentual < 100 Then
-        Call alteraCores(arquivoHTML, "yellow")
+        Call alteraCores(arquivoHTML, "orange")
     Else
         Call alteraCores(arquivoHTML, "green")
     End If
@@ -322,9 +323,7 @@ Private Sub verificaMetaDia()
         
         Do While Not rsDados.EOF
         
-            vendaMes = vendaMes + rsDados("venda")
             
-            venda = rsDados("venda")
             
             If IsNull(rsDados("devolucao")) Then
                 devolucao = 0
@@ -332,8 +331,11 @@ Private Sub verificaMetaDia()
                 devolucao = rsDados("devolucao")
             End If
             
+            venda = rsDados("venda") - devolucao
+            vendaMes = vendaMes + venda
+            
             diasHTML = diasHTML & "'" & rsDados("dia") & "','|',"
-            valoresHTML = valoresHTML & Replace(Val(venda - devolucao), ",", ".") & ", "
+            valoresHTML = valoresHTML & Replace(Val(venda), ",", ".") & ", "
             
         
             rsDados.MoveNext
