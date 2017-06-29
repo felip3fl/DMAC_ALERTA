@@ -6,8 +6,8 @@ Begin VB.Form frmMonitoraVenda
    BorderStyle     =   0  'None
    Caption         =   "Monitoramento de Vendas"
    ClientHeight    =   9690
-   ClientLeft      =   2505
-   ClientTop       =   255
+   ClientLeft      =   15
+   ClientTop       =   465
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
@@ -655,7 +655,7 @@ Begin VB.Form frmMonitoraVenda
             Width           =   3735
          End
       End
-      Begin VB.Frame frmLoja 
+      Begin VB.Frame frmLoja12 
          BackColor       =   &H00404040&
          BorderStyle     =   0  'None
          Caption         =   "Frame1"
@@ -664,6 +664,7 @@ Begin VB.Form frmMonitoraVenda
          Left            =   11430
          TabIndex        =   3
          Top             =   8505
+         Visible         =   0   'False
          Width           =   3740
          Begin VB.TextBox txtVendaEncerrada 
             Alignment       =   2  'Center
@@ -687,7 +688,7 @@ Begin VB.Form frmMonitoraVenda
             Top             =   600
             Width           =   1995
          End
-         Begin MSChartLib.MSChart chrVenda 
+         Begin MSChartLib.MSChart chrVenda12 
             Height          =   2500
             Index           =   15
             Left            =   0
@@ -1016,6 +1017,7 @@ Begin VB.Form frmMonitoraVenda
          Left            =   12030
          TabIndex        =   51
          Top             =   10530
+         Visible         =   0   'False
          Width           =   1500
       End
       Begin VB.Label lblInfo 
@@ -1336,6 +1338,7 @@ Begin VB.Form frmMonitoraVenda
          Left            =   13275
          TabIndex        =   35
          Top             =   10545
+         Visible         =   0   'False
          Width           =   1500
       End
    End
@@ -1689,7 +1692,7 @@ Private Sub atualizaValores()
         chrVenda(i).Column = 2
         percentual = (chrVenda(i).data / retornaMeta(chrVenda(i))) * 100
         lblInfo(i).Caption = "Venda " & Format(chrVenda(i).data, "0.00") & " (" & Format(percentual, "0.00") & "%)  "
-        If i = 15 Then lblInfo(i).Caption = "(" & Format(percentual, "0.00") & "%)     "
+        If i = 14 Then lblInfo(i).Caption = "(" & Format(percentual, "0.00") & "%)     "
         colorirGrafico chrVenda(i), lblInfo(i), percentual
         alertaSonoro i, percentual
         chrVenda(i).chartType = chrVenda(0).chartType
@@ -1793,7 +1796,7 @@ Private Sub alertaSonoro(posicaoComp As Byte, novoPercentual As Double)
         And Val(lblInfo(posicaoComp).ToolTipText) < Val(novoPercentual) _
         And Val(lblInfo(posicaoComp).ToolTipText) < 100 _
         And Val(lblInfo(posicaoComp).ToolTipText) > 0 Then
-            If posicaoComp <> 15 Then
+            If posicaoComp <> 14 Then
                 som.URL = "C:\Sistemas\DMAC Alerta\sons\meta.wav"
             Else
                 ''som2.URL = "C:\Sistemas\DMAC Alerta\sons\metaDia.mp3"

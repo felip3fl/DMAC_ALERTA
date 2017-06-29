@@ -301,7 +301,6 @@ Private Sub carregarLojas()
     Dim rsDados As New ADODB.Recordset
     Dim sql As String
 
-
     Call ConectaODBC(adoCNLoja)
     
         intervaloTexto = 200
@@ -326,7 +325,7 @@ Private Sub carregarLojas()
         imgSOM(0).left = lblLoja(0).left + 280
 
 
-    sql = "select top 15 rtrim(LO_Loja) as loja, rtrim(LO_IpLoja) as ip from loja where lo_loja not in ('86','185','314') and LO_Regiao < 800 order by LO_Regiao, lo_loja"
+    sql = "select top 15 rtrim(LO_Loja) as loja, rtrim(LO_IpLoja) as ip from loja where lo_situacao = 'A' and lo_loja not in ('86','185','314','535') and LO_Regiao < 800 order by LO_Regiao, lo_loja"
     rsDados.CursorLocation = adUseClient
     rsDados.Open sql, adoCNLoja, adOpenForwardOnly, adLockPessimistic
     
@@ -554,7 +553,7 @@ Private Sub atualiza()
                 lblTentativas(i).Caption = lblTentativas(i) + 1
             End If
             lblMSGStatus(i).Caption = "Sem conexão (" & lblTentativas(i).Caption & ")"
-            If (Val(lblTentativas(i).Caption) Mod 10) = 0 And imgSOM(i).Visible = False Then
+            If (Val(lblTentativas(i).Caption) Mod 20) = 0 And imgSOM(i).Visible = False Then
                 WindowsMediaPlayer1.URL = "C:\Sistemas\DMAC Alerta\sons\" & lblLoja(i).Caption & ".mp3"
             End If
             lblMSGStatus(i).ForeColor = RGB(255, 255, 255)

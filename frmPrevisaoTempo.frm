@@ -5,8 +5,8 @@ Begin VB.Form frmPrevisãoTempo
    BorderStyle     =   0  'None
    Caption         =   "Previsão Tempo"
    ClientHeight    =   7500
-   ClientLeft      =   870
-   ClientTop       =   2610
+   ClientLeft      =   2640
+   ClientTop       =   1860
    ClientWidth     =   15300
    LinkTopic       =   "Form1"
    ScaleHeight     =   7500
@@ -49,7 +49,7 @@ Begin VB.Form frmPrevisãoTempo
          NoFolders       =   0   'False
          Transparent     =   0   'False
          ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-         Location        =   ""
+         Location        =   "http:///"
       End
    End
    Begin VB.Image imgSemConexao 
@@ -87,6 +87,7 @@ Dim zoomAplicado As Boolean
 
 Private Sub Form_Activate()
     animaEntrada
+    glb_tempoPrevisao = glb_tempoPrevisao + 1
 End Sub
 
 Private Sub Form_Load()
@@ -131,7 +132,7 @@ Private Sub tmrAnima_Timer()
     Else
         tmrAnima.Enabled = False
         Me.top = 0
-        If glb_tempoPrevisao > 900 Then
+        If glb_tempoPrevisao > 20 Then
             webPrevisãoTempo.Navigate "http://www.msn.com/pt-br/clima/previsao-do-tempo/S%C3%A3o-Paulo,SP,Brasil/we-city--23.563,-46.655?iso=BR"
             glb_tempoPrevisao = 0
         End If
