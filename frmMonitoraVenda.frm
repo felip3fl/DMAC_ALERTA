@@ -1749,7 +1749,7 @@ Private Sub verificaMetaDia()
     If Not rsDados.EOF Then
        If ((rsDados("vendaDia") / rsDados("metaDia")) * 100) >= 100 Then
             metaDiaAtingida = True
-            glb_tempoPadraoExibicao = 240
+            If Not glb_primeiraConexao Then glb_tempoPadraoExibicao = 240
             som.URL = "C:\Sistemas\DMAC Alerta\sons\metaDia.mp3"
         Else
             metaDiaAtingida = False

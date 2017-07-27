@@ -20,3 +20,4 @@ Global glb_primeiraConexao As Boolean
 Global glb_tempoPrevisao As Integer
 
 Global glb_tempoPadraoExibicao As Integer
+

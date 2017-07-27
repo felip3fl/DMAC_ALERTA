@@ -49,7 +49,7 @@ Begin VB.Form frmPrevisãoTempo
          NoFolders       =   0   'False
          Transparent     =   0   'False
          ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-         Location        =   "http:///"
+         Location        =   ""
       End
    End
    Begin VB.Image imgSemConexao 
@@ -88,6 +88,9 @@ Dim zoomAplicado As Boolean
 Private Sub Form_Activate()
     animaEntrada
     glb_tempoPrevisao = glb_tempoPrevisao + 1
+    
+    webPrevisãoTempo.top = pegaTopPrevisaoINI
+    
 End Sub
 
 Private Sub Form_Load()
@@ -105,7 +108,6 @@ Private Sub Form_Load()
     frmLimitaWEB.Height = Me.Height
     
     webPrevisãoTempo.left = -20
-    webPrevisãoTempo.top = -6300
     webPrevisãoTempo.Width = Me.Width + 350
     webPrevisãoTempo.Height = Me.Height + 8200
     
@@ -117,6 +119,13 @@ Private Sub Form_Load()
     webPrevisãoTempo.Silent = True
     
 End Sub
+
+Private Function pegaTopPrevisaoINI()
+    Dim Buffer As String * 255
+    Call GetPrivateProfileString("Posicao", "PosicaoPrevisao", "", Buffer, 255, App.EXEName & ".ini")
+    
+    pegaTopPrevisaoINI = left(Buffer, 5)
+End Function
 
 Private Sub animaEntrada()
     Me.top = -Me.Height
