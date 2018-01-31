@@ -5,8 +5,8 @@ Begin VB.Form frmDMACAlerta
    BorderStyle     =   0  'None
    Caption         =   "DMAC Alerta"
    ClientHeight    =   10290
-   ClientLeft      =   1290
-   ClientTop       =   2520
+   ClientLeft      =   1350
+   ClientTop       =   1485
    ClientWidth     =   15120
    Icon            =   "DMAC Alerta.frx":0000
    LinkTopic       =   "Form1"
@@ -163,7 +163,7 @@ Begin VB.Form frmDMACAlerta
    Begin VB.Label lblLoja 
       Alignment       =   1  'Right Justify
       BackStyle       =   0  'Transparent
-      Caption         =   "646"
+      Caption         =   "NUV"
       BeginProperty Font 
          Name            =   "Arial"
          Size            =   60
@@ -325,7 +325,7 @@ Private Sub carregarLojas()
         imgSOM(0).left = lblLoja(0).left + 280
 
 
-    sql = "select top 15 rtrim(LO_Loja) as loja, rtrim(LO_IpLoja) as ip from loja where lo_situacao = 'A' and lo_loja not in ('86','185','314','535') and LO_Regiao < 800 order by LO_Regiao, lo_loja"
+    sql = "select top 14 rtrim(LO_Loja) as loja, rtrim(LO_IpLoja) as ip from loja where lo_situacao = 'A' and lo_loja not in ('86','185','314','535') and LO_Regiao < 800 order by LO_Regiao, lo_loja"
     rsDados.CursorLocation = adUseClient
     rsDados.Open sql, adoCNLoja, adOpenForwardOnly, adLockPessimistic
     
@@ -333,18 +333,29 @@ Private Sub carregarLojas()
         'lblIP(0).Caption = rsDados("ip")
         lblLoja(0).Caption = "INT"
         lblIP(0).Caption = "8.8.8.8"
+        
+
+        
         'rsDados.MoveNext
+    
+    novoMonitor 1
+    lblLoja(1).Caption = "CL"
+    lblIP(1).Caption = "172.30.5.3"
     
     Do While Not rsDados.EOF
     
-        novoMonitor rsDados.AbsolutePosition
+        novoMonitor rsDados.AbsolutePosition + 1
         
-        lblLoja(rsDados.AbsolutePosition).Caption = Format(rsDados("Loja"), "000")
-        lblIP(rsDados.AbsolutePosition).Caption = rsDados("ip")
+        lblLoja(rsDados.AbsolutePosition + 1).Caption = Format(rsDados("Loja"), "000")
+        lblIP(rsDados.AbsolutePosition + 1).Caption = rsDados("ip")
         
         rsDados.MoveNext
     
     Loop
+    
+
+            
+            
     
     rsDados.Close
     adoCNLoja.Close

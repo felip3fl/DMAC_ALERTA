@@ -6,7 +6,7 @@ Begin VB.Form frmMetaMensal1
    Caption         =   "Form1"
    ClientHeight    =   7470
    ClientLeft      =   1710
-   ClientTop       =   2190
+   ClientTop       =   345
    ClientWidth     =   17235
    LinkTopic       =   "Form1"
    ScaleHeight     =   7470

@@ -1615,12 +1615,12 @@ Private Sub atualizaValores()
     Dim i2 As Byte
     Dim j As Byte
     Dim percentual As Double
-    Dim data As String
+    Dim Data As String
     Dim totalVenda As Double
     
     On Error GoTo trataerro
     
-    data = Date
+    Data = Date
     totalVenda = 0
 '    data = "2016/10/17"
     
@@ -1629,15 +1629,15 @@ Private Sub atualizaValores()
         i = 0
         chrVenda(0).Row = j + 1
         
-        sql = "select lo_situacaoCaixa as situacaoCaixa, lo_regiao as regiao, lo_loja as loja,(select sum(totalnota) from nfcapa where me_loja = LojaVenda and tiponota = 'V' and dataemi = '" & Format(data, "YYYY/MM/DD") & "' and LojaVenda = me_loja  and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00') as totalvenda," & vbNewLine & _
-              "(select sum(totalnota) from nfcapa where me_loja = LojaVenda and tiponota = 'E' and dataemi = '" & Format(data, "YYYY/MM/DD") & "' and LojaVenda = me_loja  and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00') as totalDevolucao" & vbNewLine & _
+        sql = "select lo_situacaoCaixa as situacaoCaixa, lo_regiao as regiao, lo_loja as loja,(select sum(totalnota) from nfcapa where me_loja = LojaVenda and tiponota = 'V' and dataemi = '" & Format(Data, "YYYY/MM/DD") & "' and LojaVenda = me_loja  and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00') as totalvenda," & vbNewLine & _
+              "(select sum(totalnota) from nfcapa where me_loja = LojaVenda and tiponota = 'E' and dataemi = '" & Format(Data, "YYYY/MM/DD") & "' and LojaVenda = me_loja  and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00') as totalDevolucao" & vbNewLine & _
               "from meta, loja" & vbNewLine & _
-              "where me_mes = '" & Format(data, "MM") & "' " & vbNewLine & _
-              "and ME_ANO = '" & Format(data, "YYYY") & "'" & vbNewLine & _
+              "where me_mes = '" & Format(Data, "MM") & "' " & vbNewLine & _
+              "and ME_ANO = '" & Format(Data, "YYYY") & "'" & vbNewLine & _
               "and lo_loja = me_loja and me_loja not in ('86','185')" & vbNewLine & _
               "union" & vbNewLine & _
-              "select 'A', '999' as regiao, 'CONSO' as loja, (select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'V' and dataemi = '" & Format(data, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(data, "MM") & "' and ME_ANO = '" & Format(data, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalvenda," & vbNewLine & _
-              "(select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'E' and dataemi = '" & Format(data, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(data, "MM") & "' and ME_ANO = '" & Format(data, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalDevolucao" & vbNewLine & _
+              "select 'A', '999' as regiao, 'CONSO' as loja, (select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'V' and dataemi = '" & Format(Data, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Data, "MM") & "' and ME_ANO = '" & Format(Data, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalvenda," & vbNewLine & _
+              "(select sum(totalnota) as totalvenda from nfcapa,meta where tiponota = 'E' and dataemi = '" & Format(Data, "YYYY/MM/DD") & "' and hora between '06:00:00' and '" & Val(chrVenda(0).RowLabel) + 2 & ":00:00' and me_mes = '" & Format(Data, "MM") & "' and ME_ANO = '" & Format(Data, "YYYY") & "' and me_loja not in ('86','185') and me_loja = lojavenda) as totalDevolucao" & vbNewLine & _
               "order by regiao,loja"
               
         rsDados.CursorLocation = adUseClient
@@ -1651,13 +1651,13 @@ Private Sub atualizaValores()
             chrVenda(i).Row = j + 1
                 
             If IsNull(rsDados("totalvenda")) Then
-                chrVenda(i).data = 0
+                chrVenda(i).Data = 0
             Else
                 If IsNull(rsDados("totalDevolucao")) Then
-                    chrVenda(i).data = rsDados("totalvenda")
+                    chrVenda(i).Data = rsDados("totalvenda")
                     totalVenda = totalVenda + rsDados("totalvenda")
                 Else
-                    chrVenda(i).data = rsDados("totalvenda") - rsDados("totalDevolucao")
+                    chrVenda(i).Data = rsDados("totalvenda") - rsDados("totalDevolucao")
                     totalVenda = totalVenda + (rsDados("totalvenda") - rsDados("totalDevolucao"))
                 End If
             End If
@@ -1665,9 +1665,9 @@ Private Sub atualizaValores()
             chrVenda(i).Column = 1
 
             If IsNull(rsDados("totalDevolucao")) Then
-                    chrVenda(i).data = 0
+                    chrVenda(i).Data = 0
             Else
-                    chrVenda(i).data = rsDados("totalDevolucao")
+                    chrVenda(i).Data = rsDados("totalDevolucao")
             End If
             
             If (rsDados("situacaoCaixa") = "F") Then
@@ -1690,8 +1690,8 @@ Private Sub atualizaValores()
     i2 = i - 1
     For i = 0 To i2
         chrVenda(i).Column = 2
-        percentual = (chrVenda(i).data / retornaMeta(chrVenda(i))) * 100
-        lblInfo(i).Caption = "Venda " & Format(chrVenda(i).data, "0.00") & " (" & Format(percentual, "0.00") & "%)  "
+        percentual = (chrVenda(i).Data / retornaMeta(chrVenda(i))) * 100
+        lblInfo(i).Caption = "Venda " & Format(chrVenda(i).Data, "0.00") & " (" & Format(percentual, "0.00") & "%)  "
         If i = 14 Then lblInfo(i).Caption = "(" & Format(percentual, "0.00") & "%)     "
         colorirGrafico chrVenda(i), lblInfo(i), percentual
         alertaSonoro i, percentual
@@ -1856,7 +1856,7 @@ Private Sub carregaValoresFixo()
         
         For j = 0 To chrVenda(i).RowCount - 1
             chrVenda(i).Row = j + 1
-            chrVenda(i).data = 0
+            chrVenda(i).Data = 0
             chrVenda(i).RowLabel = 6 + (2 * (j + 1)) & "h"
         Next j
     
