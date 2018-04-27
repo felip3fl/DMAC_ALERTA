@@ -1,5 +1,3 @@
-DMAC_Alerta
-
 # DMAC Alerta
 
 Projeto DMAC Alerta desenvolvido em VB6 seguintos os padrões DMAC
