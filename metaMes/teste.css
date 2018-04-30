@@ -2,6 +2,8 @@ body {
 font-family: "Arial", "Helvetica", sans-serif;
 }
 
+
+
 estilo1{
 	color: #fff;
 	font-weight: normal;
@@ -27,7 +29,7 @@ estilo2{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	color: #fff;
+	color: blue;
 	white-space: nowrap;
 	font-weight: normal;
 	opacity: 0.85;
