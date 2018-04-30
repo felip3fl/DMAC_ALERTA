@@ -1,0 +1,71 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+
+#main{
+    width: 1024px;
+    height: 726px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:thistle;
+}
+
+#box_um{
+    width: 1024px;
+    height: 240px;
+    background-color: royalblue;
+}
+
+#div_percentual{
+    width: 500px;
+    height: 200px;
+    float: left;
+    margin-top: 26px;
+    margin-left: 29px;
+    background-color: yellowgreen;
+}
+
+#div_meta{
+    width: 462px;
+    height: 75px;
+    float: left;
+    margin-top: 26px;
+    margin-left: 8px;
+    margin-right: 19px;
+    background-color: purple;
+}
+
+#div_descricao{
+    width: 462px;
+    height: 115px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 19px;
+    background-color: lightsalmon;
+}
+
+#box_mes{
+    width: 510px;
+    height: 470px;
+    float: left;
+    margin-left: 29px;
+    background-color: cyan;
+}
+
+.title_mes{
+    width: 510px;
+    height: 40px;
+    margin-bottom: 3px;
+    background-color: cadetblue;
+}
+
+#box_temporaria{
+    width: 435px;
+    height: 470px;
+    float: left;
+    margin-left: 25px;
+    background-color: dimgrey;
+}
