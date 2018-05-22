@@ -1,0 +1,167 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+h3, h4{
+    margin: 0px;
+    padding: 0px;
+    line-height: 2.0;
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe WP","Segoe UI";
+    font-weight: bold;
+}
+
+p{
+    font-size: 23px;
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe WP","Segoe UI";
+    font-weight: bold;
+    line-height: 0.0;
+}
+
+#main{
+    width: 1024px;
+    height: 726px;
+    margin-left: auto;
+    margin-right: auto;
+/*    background-color: black;*/
+/*    background-image: url(../imagens/green.jpg);*/
+}
+
+#temafundovermelho{
+    width: 1024px;
+    height: 726px;
+    margin-left: auto;
+    margin-right: auto;
+/*    background-image: url(../imagens/black.jpg);*/
+}
+
+#box_transparencia{
+    opacity: 0.6;
+    width: 1024px;
+    height: 726px;
+    background-color: black;
+}
+
+#transparencia_element{
+    position: absolute;
+    width: 1024px;
+    height:726px;
+}
+
+
+
+
+
+#caixa_principal{
+    width: 1024px;
+    height: 726px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#box_um{
+    width: 1024px;
+    height: 240px;
+/*    background-color: royalblue;*/
+}
+
+#div_percentual{
+    width: 500px;
+    height: 120px;
+    float: left;
+    margin-top: 26px;
+    margin-left: 29px;
+    color: white;
+    font-size: 25pt;
+    padding-top: 80px;
+    background-color: yellowgreen;
+}
+
+#div_meta{
+    width: 462px;
+    height: 75px;
+    float: left;
+    margin-top: 26px;
+    margin-right: 19px;
+/*    background-color: purple;*/
+}
+
+#title_meta{
+    font-size: 35px;
+    margin-left: 25px;
+    color: white;
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe WP","Segoe UI";
+}
+
+#div_descricao{
+    width: 462px;
+    height: 115px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 8px;
+    margin-right: 19px;
+/*    background-color: lightsalmon;*/
+}
+
+.title_descricao{
+    width: 462px;
+    height: 35px;
+    margin-bottom: 1px;
+    
+}
+
+.title_info_desc{
+    width: 440px;
+    height: 35px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: white;
+}
+
+#box_mes{
+    width: 510px;
+    height: 470px;
+    float: left;
+    margin-left: 29px;
+/*    background-color: cyan;*/
+}
+
+.linha_mes{
+    width: 510px;
+    height: 40px;
+    margin-bottom: 3px;
+    color: white;
+    font-family: "Segoe UI Light","Segoe WP Light","Segoe WP","Segoe UI";
+/*    background-color: cadetblue;*/
+}
+
+.title_informacao{
+    width: 90px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+/*    background-color: pink;*/
+}
+
+.informacoes{
+    width: 90px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+/*    background-color: peru; */
+}
+
+
+#box_temporaria{
+    width: 435px;
+    height: 470px;
+    float: left;
+    margin-left: 25px;
+/*    background-color: dimgrey;*/
+}
+
+
+
+
