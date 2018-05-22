@@ -23,8 +23,16 @@ p{
     height: 726px;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
+/*    background-color: black;*/
 /*    background-image: url(../imagens/green.jpg);*/
+}
+
+#temafundovermelho{
+    width: 1024px;
+    height: 726px;
+    margin-left: auto;
+    margin-right: auto;
+/*    background-image: url(../imagens/black.jpg);*/
 }
 
 #box_transparencia{
@@ -39,6 +47,10 @@ p{
     width: 1024px;
     height:726px;
 }
+
+
+
+
 
 #caixa_principal{
     width: 1024px;
@@ -56,12 +68,14 @@ p{
 
 #div_percentual{
     width: 500px;
-    height: 200px;
+    height: 120px;
     float: left;
     margin-top: 26px;
     margin-left: 29px;
     color: white;
-/*    background-color: yellowgreen;*/
+    font-size: 25pt;
+    padding-top: 80px;
+    background-color: yellowgreen;
 }
 
 #div_meta{
@@ -94,6 +108,7 @@ p{
     width: 462px;
     height: 35px;
     margin-bottom: 1px;
+    
 }
 
 .title_info_desc{
