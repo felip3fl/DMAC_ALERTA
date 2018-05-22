@@ -215,7 +215,7 @@ Private Sub Form_Load()
     webNavegador.sErrPrintPath = App.Path & "\errreport.txt"
     webNavegador.bControlInDevelopmentMode = True
     
-    webNavegador.Nav "c:\sistemas\dmac alerta\metaMes\meta.htm"
+    webNavegador.Nav "C:\Sistemas\DMAC Alerta\new\index.html"
     webNavegador.EmbedIE FrameNavegador.hwnd
     
     frmSOM.Visible = False
@@ -255,26 +255,28 @@ Private Sub alteraCores(arquivoHTML As String, cor As String)
     Me.BackColor = corTela.cor
     arquivoHTML = Replace(arquivoHTML, "[CORGRAFICOLINHA]", corTela.corHTML50)
     arquivoHTML = Replace(arquivoHTML, "[CORGRAFICOCORPO]", corTela.corHTML10)
-    arquivoHTML = Replace(arquivoHTML, "[CORFUNDOTELA]", cor)
+    arquivoHTML = Replace(arquivoHTML, "[TEMAFUNDO]", cor)
+    
+    'arquivoHTML = Replace(arquivoHTML, "[TEMAFUNDO]", "temafundovermelho")
     
 End Sub
 
 Private Sub obterCorPercetual(arquivoHTML As String, percentual As Double)
     
     If percentual < 50 Then
-        Call alteraCores(arquivoHTML, "red")
-    ElseIf percentual < 75 Then
-        Call alteraCores(arquivoHTML, "red")
+        Call alteraCores(arquivoHTML, "temafundovermelho")
+    ElseIf percentual < 50 Then
+        Call alteraCores(arquivoHTML, "temafundoamarelo")
     ElseIf percentual < 100 Then
-        Call alteraCores(arquivoHTML, "orange")
+        Call alteraCores(arquivoHTML, "temafundolaranja")
     Else
-        Call alteraCores(arquivoHTML, "green")
+        Call alteraCores(arquivoHTML, "temafundoverde")
     End If
 
 End Sub
 
 Private Sub criaArquivoBase(arquivoHTML As String)
-    Open "c:\sistemas\dmac alerta\metaMes\meta.htm" For Output As #1
+    Open "C:\Sistemas\DMAC Alerta\new\index.html" For Output As #1
          Print #1, arquivoHTML
     Close #1
 End Sub
@@ -285,7 +287,7 @@ Private Function obterArquivoBase()
     Dim mensagemArquivoTXT As TextStream
 
     Set mensagemArquivoTXT = fso.OpenTextFile _
-    ("C:\Sistemas\DMAC Alerta\metaMes\Default.htm")
+    ("C:\Sistemas\DMAC Alerta\new\arquivoBase.html")
     obterArquivoBase = mensagemArquivoTXT.ReadAll
     mensagemArquivoTXT.Close
     
@@ -406,8 +408,8 @@ Private Sub atualizaValores()
 
     Dim arquivoHTML As String
 
-    verificaMetaDia
-    calculaValores
+    Call verificaMetaDia
+    Call calculaValores
     
     arquivoHTML = obterArquivoBase
     
@@ -424,7 +426,7 @@ Private Sub atualizaValores()
     criaArquivoBase arquivoHTML
     
 
-    webNavegador.Nav "c:\sistemas\dmac alerta\metaMes\meta.htm"
+    webNavegador.Nav "C:\Sistemas\DMAC Alerta\new\index.html"
     webNavegador.EmbedIE FrameNavegador.hwnd
     
     abilitaSOM percentualVenda

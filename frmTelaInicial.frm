@@ -97,29 +97,29 @@ Function chamaFormulario() As Boolean
     glb_tempoPadraoExibicao = left(Buffer, 2)
     If glb_tempoPadraoExibicao = 0 Then idFormulario = idFormulario + 1
     
-    Select Case idFormulario
-        Case 0
-            glb_monitorarRede = True
-            frmDMACAlerta.Show
-        Case 1
-            frmMonitoraVenda.Show
-        Case 2
-            If Day(Date) >= 30 Then
+    'Select Case idFormulario
+        'Case 0
+            'glb_monitorarRede = True
+            'frmDMACAlerta.Show
+        'Case 1
+            'frmMonitoraVenda.Show
+        'Case 2
+            'If Day(Date) >= 30 Then
                 frmMetaMensal1.Show
             'Else
              '   glb_tempoPadraoExibicao = 0
-            End If
+            'End If
             
-        Case 3
-            frmPrevisãoTempo.Show
-        Case 4
-            frmLogo.Show
-        Case Else
+        'Case 3
+            'frmPrevisãoTempo.Show
+        'Case 4
+            'frmLogo.Show
+        'Case Else
         
-        glb_primeiraConexao = False
-        chamaFormulario = False
-        idFormulario = 0
+        'glb_primeiraConexao = False
+        'chamaFormulario = False
+        'idFormulario = 0
         
-    End Select
+    'End Select
     
 End Function
