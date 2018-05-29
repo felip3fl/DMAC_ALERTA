@@ -1,10 +1,10 @@
 Type=Exe
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
-Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\..\..\..\..\Windows\SysWOW64\scrrun.dll#Microsoft Scripting Runtime
-Reference=*\G{B691E011-1797-432E-907A-4D8C69339129}#6.1#0#..\..\..\..\..\..\Program Files (x86)\Common Files\System\ado\msado15.dll#Microsoft ActiveX Data Objects 6.1 Library
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{420B2830-E718-11CF-893D-00A0C9054228}#1.0#0#..\..\Windows\SysWOW64\scrrun.dll#Microsoft Scripting Runtime
+Reference=*\G{B691E011-1797-432E-907A-4D8C69339129}#6.1#0#..\..\Program Files (x86)\Common Files\System\ado\msado15.dll#Microsoft ActiveX Data Objects 6.1 Library
 Object={6BF52A50-394A-11D3-B153-00C04F79FAA6}#1.0#0; wmp.dll
 Object={EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}#1.1#0; ieframe.dll
-Reference=*\G{27995AA1-C6E3-4B5F-AE4B-31A26C1DF5BD}#1.0#0#..\..\..\..\..\..\Windows\SysWow64\DMACDv2.dll#DMACD
+Reference=*\G{27995AA1-C6E3-4B5F-AE4B-31A26C1DF5BD}#1.0#0#..\..\Windows\SysWow64\DMACDv2.dll#DMACD
 Object={02B5E320-7292-11CF-93D5-0020AF99504A}#1.0#0; MSCHART.OCX
 Form=DMAC Alerta.frm
 Module=Module1; modPing.bas
