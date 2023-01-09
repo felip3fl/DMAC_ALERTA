@@ -40,7 +40,10 @@ Use o ``Visual Basic 6`` para usar este projeto
 &nbsp;&nbsp;<img width="90"  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg">
 &nbsp;&nbsp;<img width="90" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg">
 </p>
-
+ 
+- ``VB6``
+- ``Windows Form``
+ 
 <BR>  
   
 ## Autor
