@@ -1,4 +1,4 @@
-<h1 align="center"> <img src="https://user-images.githubusercontent.com/20684484/211383835-cc4d8ef2-7f4c-437e-be2c-329503b0b7f2.png" width="50%" align="center" ><BR>DMAC ALERTA<BR><BR></h1>
+<h1 align="center"> <img src="https://user-images.githubusercontent.com/20684484/211394469-42e0ba5f-961c-4093-a3ab-be28cd57d702.png" width="50%" align="center" ><BR>DMAC ALERTA<BR><BR></h1>
 
 Projeto DMAC Alerta desenvolvido em VB6 seguintos os padrões DMAC
 
