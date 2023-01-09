@@ -10,6 +10,8 @@
 <img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
 </p>
 
+<BR>
+
 <img src="https://github.com/ssj4dofuturo/DMAC_ALERTA/blob/master/Material/Print/Dmac%20Alerta.gif?raw=true" >
 
 ## :hammer: Funcionalidades do projeto
