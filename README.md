@@ -1,9 +1,13 @@
-<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/211394469-42e0ba5f-961c-4093-a3ab-be28cd57d702.png" width="250px" align="center" ><BR>ALERTA<BR><BR>
-
-<img src="https://img.shields.io/badge/STATUS-FINALIZADO-yellow">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
-
+<h3 align="center"> <img src="https://user-images.githubusercontent.com/20684484/211394469-42e0ba5f-961c-4093-a3ab-be28cd57d702.png" width="250px" align="center" ><BR>ALERTA
 </h3>
+<BR>
+<p align="center">
+ <img src="https://img.shields.io/badge/STATUS-FINALIZADO-yellow">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
+</p>
+
+
+
  
 <BR>
  
