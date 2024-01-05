@@ -2,8 +2,8 @@
 </h3>
 <BR>
 <p align="center">
- <img src="https://img.shields.io/badge/STATUS-FINALIZADO-yellow">
-<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-blue">
+ <img src="https://img.shields.io/badge/STATUS-FINALIZADO-dfb101">
+<img src="https://img.shields.io/badge/PROJECT%20VERSION-1.0.0-0000d9">
 </p>
 
 
